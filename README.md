@@ -12,7 +12,7 @@
     <img src="https://img.shields.io/packagist/dt/bitarun/laravel-notification-service.svg?style=flat-square" alt="Total Downloads">
   </a>
   <img src="https://img.shields.io/badge/PHP-%3E%3D8.1-777bb4?style=flat-square" alt="PHP Version">
-  <img src="https://img.shields.io/badge/Laravel-11%20%7C%2012-ff2d20?style=flat-square" alt="Laravel Version">
+  <img src="https://img.shields.io/badge/Laravel->=11-ff2d20?style=flat-square" alt="Laravel Version">
   <img src="https://img.shields.io/badge/license-MIT-brightgreen?style=flat-square" alt="License">
 </p>
 
