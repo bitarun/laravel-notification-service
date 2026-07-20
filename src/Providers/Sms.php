@@ -52,8 +52,6 @@ class Sms implements Provider
                 statusCode: $response->status()
             );
         }
-
-        dd($this->text);
     }
 
     public static function resolveRecipient(string $value): NotificationRecipient
