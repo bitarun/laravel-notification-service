@@ -57,13 +57,13 @@ class Notification
             }
         }
 
-        return $this->sendNow($providerPath, $arguments);
+        $this->sendNow($providerPath, $arguments);
     }
 
     /**
      * @throws Exception
      */
-    protected function sendNow(string $providerPath, array $arguments): null
+    protected function sendNow(string $providerPath, array $arguments): void
     {
         $providerInstance = new $providerPath(... $arguments);
 
