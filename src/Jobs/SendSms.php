@@ -4,6 +4,7 @@ namespace Bitarun\LaravelNotificationService\Jobs;
 
 use Bitarun\LaravelNotificationService\DTOs\NotificationRecipient;
 use Bitarun\LaravelNotificationService\Notification;
+use Bitarun\LaravelNotificationService\Providers\Sms;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
 
@@ -27,12 +28,8 @@ class SendSms implements ShouldQueue
      * Execute the job.
      * @throws \Exception
      */
-    public function handle(Notification $notification)
+    public function handle(): void
     {
-        $result = $notification->now()->sendSms($this->recipient, $this->text);
-
-        if (! $result['success']) {
-            throw new \Exception($result['message']);
-        }
+        (new Sms($this->recipient, $this->text))->send();
     }
 }
